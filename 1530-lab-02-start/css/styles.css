@@ -15,17 +15,239 @@ font-family: 'Pacifico', cursive;
 */
 
 /* UNIVERSAL STYLES */
-
-
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    
+}
+h1{
+    font-family: 'Pacifico', cursive;
+    color: #eeeaeb;
+}
+h2 {
+    font-family: 'Pacifico', cursive;
+    color: #eeeaeb;
+    
+}
+a {
+    color: #eeeaeb;
+    text-decoration: none;
+    
+}
+li {
+    padding: 3em 4em 0em 4em;
+}
 /* MOBILE VIEW */
+@media screen and (max-width: 719px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        text-decoration: underline;
+    }
+    .submenu {
+        display: block;
+    }
+    svg {
+        display: none;
+    }
+    .hero-banner{
+        color: #eeebeb;
+        background-image: url('../img/grapefruit-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 120vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .hero-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .hero-banner * {
+        position: relative;
+        z-index: 2; 
+    }
+    
+    .hero-banner p {
+        padding-bottom: 10px;
+        width: 60%; 
+        margin-left: 19%;
+    }
+    .faux-section {
+        position: relative;
+        left: 0;
+        text-align: center;
 
+    }
+    h2{
+        font-size: 60px;
+        padding-bottom: 0.5em;
+        word-wrap: break-word;
+        width: 60%;
+        margin-left: 18%;
+        margin-top: -10%;
+    }
+    header {
+        background-color: #20abad;
+        color: #eeeaeb;
+        text-align: left;
+        padding-bottom: 40px;
+    }
+    header h1 {
+        text-align: center;
+    }
 
+    button{
+        padding: 0.7em;
+        background-color: #20abad;
+        color: #eeeaeb;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.8em;
+        margin-top: 0.6em;
+        text-decoration: underline;
+        margin-left: -5%;
+    }
+}
+    
 /* DESKTOP VIEW */
 @media screen and (min-width: 720px) {
-
+    .hero-banner {
+        color: #eeeaeb; 
+        background-image: url('../img/grapefruit-bg.jpg'); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-banner p {
+        padding-bottom: 0.7em;
+        width: 50%; 
+        margin-left: 25%;
+    }
+    
+    .menu {
+        display: flex;
+        justify-content: center;
+        text-decoration: underline;
+    }
+    .submenu {
+        visibility: hidden;
+        position: absolute;
+    }
+      
+    .menu li:hover > .submenu li {
+        visibility: visible;
+        display: block;
+        background-color: #20abad;
+        padding: 1rem;
+    }
+    header {
+        background-color: #20abad;
+        color: #eeeaeb;
+        padding: 2em;
+        text-align: center;
+        align-items: center;
+       
+    }
+    .faux-section {
+        position: relative;
+        left: 15%;
+        text-align: center;
+    }
+    h2{
+        font-size: 55px;
+        padding-bottom: 0.5em;
+    }
+    button{
+        padding: 0.7em;
+        background-color: #20abad;
+        color: #eeeaeb;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.8em;
+        margin-top: 0.6em;
+        text-decoration: underline;
+    }
+    
 }
+
 
 /* LARGEST VIEW */
 @media screen and (min-width: 1024px) {
     
+    .hero-banner {
+        color: #eeeaeb; 
+        background-image: url('../img/grapefruit-bg.jpg'); 
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }    
+    .hero-banner p {
+        padding-bottom: 1em;
+        width: 70%; 
+        margin-left: 15%;
+        
+    }
+    
+    .menu {
+        display: flex;
+        justify-content: center;
+        text-decoration: underline;
+    }
+    .submenu {
+        visibility: hidden;
+        position: absolute;
+      }
+      
+      .menu li:hover > .submenu li {
+        visibility: visible;
+        display: block;
+        background-color: #20abad;
+        padding: 1rem;
+      }
+      header {
+        background-color: #20abad;
+        color: #eeeaeb;
+        padding: 2em;
+        text-align: center;
+        align-items: center;
+       
+    }
+    .faux-section {
+        position: relative;
+        left: 15%;
+        text-align: center;
+    }
+    h2{
+        font-size: 70px;
+        padding-bottom: 0.5em;
+    }
+    button{
+        padding: 0.8em;
+        background-color: #20abad;
+        color: #eeeaeb;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        margin-top: 0.5em;
+        text-decoration: underline;
+    }
+
 }
